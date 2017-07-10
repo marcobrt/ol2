@@ -75,21 +75,6 @@ div.olLayerDiv {
     font-size: smaller;
 }
 
-div.olControlMousePosition {
-    bottom: 0;
-    right: 3px;
-    display: block;
-    position: absolute;
-    font-family: Arial;
-    font-size: smaller;
-}
-
-.olControlOverviewMapContainer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .olControlOverviewMapElement {
     padding: 10px 18px 10px 10px;
     background-color: #00008B;
@@ -437,48 +422,47 @@ span.olGoogleAttribution.hybrid a, span.olGoogleAttribution.satellite a {
     background-position: -26px -24px;
 }
 
+div.olControlMousePosition,
 div.olControlZoom, div.olControlTextButtonPanel {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 4px;
-    padding: 2px;
+	background: rgba(255,255,255,1.0);
+	border-radius: 1px;
+	padding: 2px;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
 }
+
+div.olControlMousePosition {
+	font-family: "Roboto", sans-serif;
+}
+
 div.olControlZoom a {
-    font-size: 18px;
-    line-height: 19px;
-    height: 22px;
-    width:22px;
-    padding: 0;
+	font-size: 18px;
+	line-height: 19px;
+	height: 22px;
+	width:22px;
+	padding: 0;
 }
+
 div.olControlZoom a, div.olControlTextButtonPanel .olButton {
-    display: block;
-    margin: 1px;
-    color: white;
-    font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    background: #130085; /* fallback for IE - IE6 requires background shorthand*/
-    background: rgba(0, 60, 136, 0.5);
-    filter: alpha(opacity=80);
+	display: block;
+	margin: 1px;
+	color: #666666;
+	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1.0);
 }
 div.olControlZoom a:hover, div.olControlTextButtonPanel .olButton:hover {
-    background: #130085; /* fallback for IE */
-    background: rgba(0, 60, 136, 0.7);
-    filter: alpha(opacity=100);
+	color: #000;
 }
 @media only screen and (max-width: 600px) {
-    div.olControlZoom a:hover, div.olControlTextButtonPanel .olButton:hover {
-        background: rgba(0, 60, 136, 0.5);
-    }
+
 }
 a.olControlZoomIn {
-    border-radius: 4px 4px 0 0;
+	border-bottom: 1px solid #aaa;
 }
 a.olControlZoomOut {
-    border-radius: 0 0 4px 4px;
+	line-height: 22px !important;
 }
 
 /**
